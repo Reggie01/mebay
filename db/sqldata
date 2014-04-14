@@ -1,0 +1,17 @@
+BEGIN TRANSACTION;
+CREATE TABLE "ads" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "price" decimal, "seller_id" integer, "email" varchar(255), "img_url" varchar(255), "created_at" datetime, "updated_at" datetime);
+INSERT INTO ads VALUES(1,'Typewriter','Old manual typewriter. Many years useful service. Works best with a bottle next to it.',71.95,54,'dhammett@email.com','http://homepage.mac.com/david_griffiths/typewriter.png','','');
+INSERT INTO ads VALUES(2,'Football','Some strings frayed.',74.02,45,'marty@googlemail.com','http://www.freefever.com/freeclipart/clipart/football2.gif','','');
+INSERT INTO ads VALUES(3,'Moosehead','Slightly moth-eaten. One of the antlers is broken and there''s a strange buzzing sound behind the eyes...',2978.25,56,'kathy@hotmail.com','http://saloon.javaranch.com/ubb/moosefly.gif','','');
+INSERT INTO ads VALUES(4,'Desk','Milk desk - go...',4800,123,'andy@allmail....','http://picasaweb.goog...','','');
+INSERT INTO ads VALUES(5,'Door curtain','Beaded door cu...',11,773,'dawn@hotmail....','http://www.freewebsit...','','');
+INSERT INTO ads VALUES(6,'Apple Newton','Still works! M...',25,2,'ahertz@differ...','http://www.differnet....','','');
+INSERT INTO ads VALUES(7,'Sinclair C5','Battery flat t...',372.06,346,'clive@sinclai...','http://www.ebay.com/w...','','');
+INSERT INTO ads VALUES(8,'Edsel','Never used aut...',355,755,'bing@badabing...','http://pages.google.c...','','');
+INSERT INTO ads VALUES(37,'Diamond','203.4 carats, grade D pear cut diamond. Low price for quick sale. Owner leaving the country.',1000000,5234,'pink@panther.com','http://','','');
+CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL);
+INSERT INTO schema_migrations VALUES(20081127162635);
+CREATE TABLE sqlite_sequence(name,seq);
+INSERT INTO sqlite_sequence VALUES('ads',37);
+CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version");
+COMMIT;
